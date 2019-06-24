@@ -1,10 +1,14 @@
 ![Libra Logo](/../screenshots/screens/libra_andc9.png?raw=true "Libra Logo")
 # AWS-Libra-Blockchain
-Helps you get started working with Libra Blockchain on AWS. You can connect to the Libra Testnet, create your own local Testnet and execute Move contracts by following tutorials starting [Over Here](https://developers.libra.org/docs/my-first-transaction).
 
-This walkthrough will take your through using Amazon [Cloud9](https://aws.amazon.com/cloud9/details/) browser-based Cloud Integrated Development Environment (IDE) which will be built on top of Ubuntu 18.04 (you can additionally choose Amazon Linux 2 if you are familiar with `yum`)
+## Introduction && Housekeeping
+The goal of this Project is to get Blockchain Developers, Architects, Professional Services Consultants, Enthusiasts and anyone else interested in the Libra Blockchain started on experimentation with it on AWS. To find out more about the Libra Project you can check out the [Libra Github](https://github.com/libra/libra), [Libra Developer Website](https://developers.libra.org/docs/libra-protocol) or the [Libra Community Boards](https://community.libra.org/) to get yourself further familiarized with core concepts, theory and walkthroughs.
 
-## Creating Cloud9 IDE
+A lot of the material here is sourced directly from the [My First Transaction](https://developers.libra.org/docs/my-first-transaction) walkthrough, but I have re-ordered and added clarification / my own flavor where I felt necessary. Some of the documentation is scattered on different pages, and are not easily searchable, so hopefully this Project will alleviate some of that pain. The overall goal is centered around creating a Local Testnet and running your tests there - whether it is transactions, minting, Move Smart Contracts or eventually RESTful API operations to build Mobile Apps, PWAs, etc.
+
+This walkthrough will take your through using Amazon [Cloud9](https://aws.amazon.com/cloud9/details/) browser-based Cloud Integrated Development Environment (IDE) which will be built on top of Ubuntu 18.04 (you can additionally choose Amazon Linux 2 if you are familiar with `yum`). This Project assumes you have minimal familiarity of AWS, of Linux (let alone Debian-based flavors) and zero knowledge of Libra Blockchain, therefore, some steps may seem redundant or superfulous - but I am attempting to cater to a wider audience versus my other projects.
+
+## Creating the Cloud9 IDE
 1. Log into the AWS Management Console, Scroll down to **Developer Tools** and select Cloud9
 ![IDE Step 1](/../screenshots/screens/Step1.JPG?raw=true "IDE Step 1")
 

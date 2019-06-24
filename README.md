@@ -74,7 +74,7 @@ cd libra
 10. To connect to the Testnet, change directories `cd libra` and run `./scripts/cli/start_cli_testnet.sh` which will take a few minutes, you should see `libra%` when done to denote you are within the Libra CLI
 ![IDE Step 10](/../screenshots/screens/Step10.JPG?raw=true "IDE Step 10")
 
-## Basic Transactions on Libra Blockchain
+## Basic Transactions on Libra Blockchain - Public Testnet
 11. Create your 1st Account `account create`, you can create an additional account by repeating the command
 ![IDE Step 11](/../screenshots/screens/Step11.JPG?raw=true "IDE Step 11")
 
@@ -97,6 +97,8 @@ cd libra
 `transferb 1 b31c76a6c781bdc1426ad95272cc74eb2f6579bbc5efe7f63c1a4976a760c2fc 10`
 ![IDE Step 17](/../screenshots/screens/Step17.JPG?raw=true "IDE Step 17")
 
-## Next Steps
+# Next Steps
+*This Readme and side project is a work in progress -- will be covering private test nets, joining networks and building infrastructure on AWS via Terraform, CloudFormation or custom AMIs*
 
-This Readme and side project is a work in progress -- will be covering private test nets, joining networks and building infrastructure on AWS via Terraform, CloudFormation or custom AMIs
+## Private Testnet
+Please follow the Readme [here](https://github.com/jonrau1/AWS-Libra-Blockchain/tree/master/Configure%20Local%20Testnet) to learn how to create a Local Libra Blockchain Network on an EC2 Instance, connect to it from your existing Cloud9 IDE and perform transactions with remote clients.

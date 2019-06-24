@@ -1,4 +1,4 @@
-![Libra Logo](/../screenshots/screens/libra.png?raw=true "Libra Logo")
+![Libra Logo](/../screenshots/screens/libra_andc9.png?raw=true "Libra Logo")
 # AWS-Libra-Blockchain
 Helps you get started working with Libra Blockchain on AWS. You can connect to the Libra Testnet, create your own local Testnet and execute Move contracts by following tutorials starting [Over Here](https://developers.libra.org/docs/my-first-transaction).
 

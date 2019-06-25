@@ -34,6 +34,6 @@ In this Stage, we will create our supporting infrastructure - in this case a sin
 ![Local Net Step 6](/../screenshots/local-net-screens/Step6.JPG?raw=true "Local Net Step 6")
 
 7. In the IAM Console, select **Users** from the menu on the left, and click **Add User** on the top left of the Users Console
-![Local Net Step 7](/../screenshots/local-net-screens/Step7.JPG?raw=true "Local Net Step 7")
+![Local Net Step 7](/../screenshots/local-net-screens/NewStep7.JPG?raw=true "Local Net Step 7")
 
 8. 

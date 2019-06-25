@@ -1,5 +1,5 @@
-![Libra Logo](/../screenshots/screens/libra_andc9.png?raw=true "Libra Logo")
 # Libra Blockchain on AWS Cloud
+![Main Logo](/../screenshots/screens/main-aws-libra.png?raw=true "Main Logo")
 
 ## Introduction && Housekeeping
 The goal of this Project is to get Blockchain Developers, Architects, Professional Services Consultants, Enthusiasts and anyone else interested in the Libra Blockchain started on experimentation with it on AWS. To find out more about the Libra Project you can check out the [Libra Github](https://github.com/libra/libra), [Libra Developer Website](https://developers.libra.org/docs/libra-protocol) or the [Libra Community Boards](https://community.libra.org/) to get yourself further familiarized with core concepts, theory and walkthroughs.
@@ -8,10 +8,10 @@ A lot of the material here is sourced directly from the [My First Transaction](h
 
 ## Project Phases
 
-- **Phase 1**: My First Transaction (on Cloud9)
+- **[Phase 1](https://github.com/jonrau1/AWS-Libra-Blockchain/tree/master/Phase%201%20-%20My%20First%20Transaction%20(on%20Cloud9))**: My First Transaction (on Cloud9)
   - This Phase will take you through configuring the Amazon Cloud9 IDE to interact with the Libra Blockchain, connect into the Public Testnet and execute some basic Libra CLI Commands to get your familiarized with Libra
 
-- **Phase 2**: Private Libra Blockchain Network
+- **[Phase 2](https://github.com/jonrau1/AWS-Libra-Blockchain/tree/master/Phase%202%20-%20Private%20Libra%20Blockchain%20Network)**: Private Libra Blockchain Network
   - This Phase will introduce you to provisioning infrastructure needed to support a localized Testnet, how to connect Remote Clients into it, and how to execute additional Libra CLI Commands. This will allow you to undergo rigorous testing in a controlled environment versus using the Public Testnet.
 
 ## Next Steps

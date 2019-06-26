@@ -120,6 +120,8 @@ cd libra
 30. From your IDE, issue the following command `cargo run -p client --bin client -- --host <host_IP> --port <PORT> --validator_set_file ./trusted_peers.config.toml --faucet_key_file_path ./temp_faucet_keys` replacing the **--host** value with the Private IP address of your Local Libra Blockchain Network EC2 Instance, and the **--port** value with the Port number you retrieved in Step 24. If successful, you should see the Libra CLI `libra%`.
 ![Local Net Step 30](/../screenshots/local-net-screens/Step30.JPG?raw=true "Local Net Step 30")
 
+**NOTE** You can resolve your Public IP address if you are coming from another VPC / private address space. Preliminary tests have found that you cannot resolve the Public IP while in the same private address space, but you can resolve externally. Keep this in mind as you build out your blockchain network architecture, as well as your network-layer security patterns.
+
 31. Create Accounts and Mint Coins in both your EC2 Instance and Cloud9 Instance `account create` `account mint 0 <value>`. Take Note of your Addresses, as this is what you will use to Transfer Libra, versus the Index Number in the previous walkthrough.
 
 32. Transfer Coins from one of your accounts to the other, you will begin with your own Account's Index Number and enter in your target Account's Address Number. For example, `transferb 0 750dab1fc2cc88dc66312188d1988c1c4c0f7f22f72ab6ea76f9ace95a223add 15` (Note, you do not need to use Blocking mode) and on the Receiver's end: `query balance 0`. Feel free to transfer back and forth between different Accounts to get a feel of this.

@@ -96,6 +96,8 @@ cd libra
 22. Configure your AWS CLI by typing in `aws configure` and copying in your Access Key, Secret Access Key and entering in your Region from the previous Stage - you will need this for later to copy out the necessary files into the S3 Bucket you created.
 ![Local Net Step 22](/../screenshots/local-net-screens/Step22.JPG?raw=true "Local Net Step 22")
 
+**NOTE** *You can also create an EC2 Instance Profile and attach it to EC2 Instances running your Node as well as your Remote Client to avoid having to deal with the AWS CLI, this step is included as it is the most basic for basic Authorization & Authentication into AWS API's*
+
 23. Change directories (if the Shell script didn't already) to Libra `cd libra` run Libra Swarm to create your own Local Libra Blockchain Network (go make a coffee, this will take awhile) `cargo run -p libra_swarm -- -s`. After it finishes, you will be see the Libra CLI `libra%` and above you will be given the location of your Faucet keys (to mint coins) and your Config Files that are needed to connect your Remote Clients into your Private Libra Blockchain Network. You can pass additional modifiers such as `-d` to disable logging (and minimize file sizes) or `-n <#>` to specify additional Validators in your Node.
 ![Local Net Step 23](/../screenshots/local-net-screens/Step23.JPG?raw=true "Local Net Step 23")
 
@@ -120,7 +122,7 @@ cd libra
 30. From your IDE, issue the following command `cargo run -p client --bin client -- --host <host_IP> --port <PORT> --validator_set_file ./trusted_peers.config.toml --faucet_key_file_path ./temp_faucet_keys` replacing the **--host** value with the Private IP address of your Local Libra Blockchain Network EC2 Instance, and the **--port** value with the Port number you retrieved in Step 24. If successful, you should see the Libra CLI `libra%`.
 ![Local Net Step 30](/../screenshots/local-net-screens/Step30.JPG?raw=true "Local Net Step 30")
 
-**NOTE** You can resolve your Public IP address if you are coming from another VPC / private address space. Preliminary tests have found that you cannot resolve the Public IP while in the same private address space, but you can resolve externally. Keep this in mind as you build out your blockchain network architecture, as well as your network-layer security patterns.
+**NOTE** *You can resolve your Public IP address if you are coming from another VPC / private address space. Preliminary tests have found that you cannot resolve the Public IP while in the same private address space, but you can resolve externally. Keep this in mind as you build out your blockchain network architecture, as well as your network-layer security patterns.*
 
 31. Create Accounts and Mint Coins in both your EC2 Instance and Cloud9 Instance `account create` `account mint 0 <value>`. Take Note of your Addresses, as this is what you will use to Transfer Libra, versus the Index Number in the previous walkthrough.
 
@@ -156,6 +158,12 @@ ContractEvent { access_path: AccessPath { address: 1c985958fae85a21d428d6cf9d260
 ContractEvent { access_path: AccessPath { address: 750dab1fc2cc88dc66312188d1988c1c4c0f7f22f72ab6ea76f9ace95a223add, type: Resource, hash: "217da6c6b3e19f1825cfb2676daecce3bf3de03cf26647c78df00b371b25cc97", suffix: "/received_events_count/" } , index: 0, event_data: AccountEvent { account: 1c985958fae85a21d428d6cf9d260846b57e0d93d1c7483eccc5a94e746649d3, amount: 15000000 } }
 libra%
 ```
+
+33. To save your account wallet for later recovery when reconnecting to the testnet, you need to write out your mnemonic file to the disk. It is a recovery seed file you can recover your wallets from via the Libra CLI. To do this, enter `account write <file-path>/<name>` it is simple enough to enter `account write savefile` and your recovery seed file will appear in your `/libra` directory. (*This screenshoot was re-used from Phase 1, sorry*)
+![IDE Step 18](/../screenshots/screens/Step18.JPG?raw=true "IDE Step 18")
+
+34. To recover your account wallet(s), disconnect for the Testnet by entering `q!`. Re-run the script `./scripts/cli/start_cli_testnet.sh` and when the CLI is ready enter in `account recover savefile` (or whatever name you save it as). To confirm, you can enter in `account list` and/or `query balance 0` / `query balance <account #>` to confirm you have recovered it. This is useful if you wanted to connect to the public Testnet via another host / client and wanted to take your account wallets with you. (*This screenshoot was re-used from Phase 1, sorry*)
+![IDE Step 19](/../screenshots/screens/Step19.JPG?raw=true "IDE Step 19")
 
 ## Outro
 

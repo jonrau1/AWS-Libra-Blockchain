@@ -92,6 +92,12 @@ cd libra
 `transferb 1 b31c76a6c781bdc1426ad95272cc74eb2f6579bbc5efe7f63c1a4976a760c2fc 10`
 ![IDE Step 17](/../screenshots/screens/Step17.JPG?raw=true "IDE Step 17")
 
+18. To save your account wallet for later recovery when reconnecting to the testnet, you need to write out your mnemonic file to the disk. It is a recovery seed file you can recover your wallets from via the Libra CLI. To do this, enter `account write <file-path>/<name>` it is simple enough to enter `account write savefile` and your recovery seed file will appear in your `/libra` directory.
+![IDE Step 18](/../screenshots/screens/Step18.JPG?raw=true "IDE Step 18")
+
+19. To recover your account wallet(s), disconnect for the Testnet by entering `q!`. Re-run the script `./scripts/cli/start_cli_testnet.sh` and when the CLI is ready enter in `account recover savefile` (or whatever name you save it as). To confirm, you can enter in `account list` and/or `query balance 0` / `query balance <account #>` to confirm you have recovered it. This is useful if you wanted to connect to the public Testnet via another host / client and wanted to take your account wallets with you.
+![IDE Step 19](/../screenshots/screens/Step19.JPG?raw=true "IDE Step 19")
+
 # Next Steps
 
 You have now demonstrated the ability to configure Cloud9 IDE to interact with the Libra Blockchain and Public Testnet. Feel free to stay here or continue on to [Phase 2](https://github.com/jonrau1/AWS-Libra-Blockchain/tree/master/Phase%202%20-%20Private%20Libra%20Blockchain%20Network) to go through creating your own Localized Testnet.
